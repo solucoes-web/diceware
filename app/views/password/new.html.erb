@@ -1,5 +1,7 @@
-<p class='password'>
-  <% @password.each_with_index do |pswd, i| %>
-  <span class='<%= paridade(i) %>'><%= pswd %></span>
+<% (5..10).each do |size| -%>
+<p>
+  <%= link_to size.to_s do %>
+  Criar uma senha com <%= size %> palavras.
   <% end %>
 </p>
+<% end -%>
