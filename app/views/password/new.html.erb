@@ -1,7 +1,7 @@
 <% (5..10).each do |size| -%>
 <p>
   <%= link_to size.to_s do %>
-  Criar uma senha com <%= size %> palavras.
+  Criar uma senha com <%= size %> palavras  (<%= entropy(size).round(0) %> bits de entropia).
   <% end %>
 </p>
 <% end -%>
