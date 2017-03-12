@@ -1,5 +1,5 @@
 <p class='password'>
-    <% @password.each do |pswd| %>
-        <%= pswd %>
-    <% end %>
+  <% @password.each_with_index do |pswd, i| %>
+  <span class='<%= paridade(i) %>'><%= pswd %></span>
+  <% end %>
 </p>
