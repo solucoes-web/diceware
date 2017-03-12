@@ -1,4 +1,4 @@
-# diceware
+# Diceware
 Uma aplicação para criar senhas fortes e fáceis de memorizar.
 
 [Dicewire](http://world.std.com/~reinhold/diceware.html) é um método proposto por Arnold G. Reinhold para gerar e memorizar senhas fortes utilizando um dicionário quase 8 mil palavras (que tem inclusive versão em [português](https://gist.github.com/patxipierce/3a96b1927b844ce47c04a242651bafc2)) e cinco dados.
