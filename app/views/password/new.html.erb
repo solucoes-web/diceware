@@ -1,9 +1,7 @@
 <div id='main'>
-  <% (5..10).each do |size| -%>
-  <p>
-    <%= link_to size.to_s do %>
-    Criar uma senha com <%= size %> palavras  (<%= Password.new(size).entropy.round(0) %> bits de entropia).
-    <% end %>
-  </p>
-  <% end -%>
+  <%= form_tag "/password" do %>
+  <%= label_tag(:password, "Número de palavras:") %>
+  <%= number_field(:password, :size, in: 2..10, step: 1) %>
+  <%= submit_tag("Gerar Senha") %>
+  <% end %>
 </div>

@@ -2,11 +2,13 @@
 class PasswordController < ApplicationController
   def new
   end
-  
-  def show
-    @password = Password.new params[:size]
+
+  def create
+    size = params[:password][:size]
+    @password = Password.new(size)
+    
     if @password.valid?
-      @password
+      render :show
     else
       flash[:error] = @password.errors.messages[:size]
       render :new

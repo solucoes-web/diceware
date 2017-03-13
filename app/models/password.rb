@@ -2,8 +2,8 @@ class Password
   include ActiveModel::Model
   
   attr_reader :array, :dictionary, :size
-  validates :size,
-            numericality: { only_integer: true, greater_than: 3, less_than: 20 }
+  validates :size, numericality:
+                     { only_integer: true, greater_than: 1, less_than: 20 }
 
   def initialize(size)
     @size = size.to_i

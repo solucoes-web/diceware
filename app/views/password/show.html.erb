@@ -3,3 +3,5 @@
   <span class='<%= paridade(i) %>'><%= pswd %></span>
   <% end %>
 </p>
+
+<p>Essa senha possui <%= @password.entropy.round 0 %> bits de entropia</p>
