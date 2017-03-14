@@ -5,3 +5,4 @@
 </p>
 
 <p>Essa senha possui <%= @password.entropy.round 0 %> bits de entropia</p>
+<p>Considerando uma máquina com <a href="https://en.bitcoin.it/wiki/Mining_hardware_comparison">14 Thash/s</a>, o tempo estimado para quebrar essa senha é <%= readable_time @password.estimated_time %>.</p>

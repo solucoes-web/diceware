@@ -1,7 +1,14 @@
-<div id='main'>
+<div id="">
   <%= form_tag "/password" do %>
-  <%= label_tag(:password, "Número de palavras:") %>
-  <%= number_field(:password, :size, in: 2..10, step: 1) %>
+  <%= label_tag(:dictionary, "Escolha um dicionário de palavras:") %>
+  <%= select(:dictionary, :number, @dictionaries) %>
+  <br/>
+  <%= label_tag(:words, "Número de palavras:") %>
+  <%= number_field(:words, :number, in: 2..10, step: 1) %>
+  <br/>
+  <%= label_tag(:symbols, "Número de símbolos:") %>
+  <%= number_field(:symbols, :number, in: 0..30, step: 1) %>
+  <br/>
   <%= submit_tag("Gerar Senha") %>
   <% end %>
 </div>
